@@ -3,18 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="kr.hs.emirim.thsgkdud123.viewflippertest.MainActivity"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
         <Button
+        android:id="@+id/but_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/but_text_prev"/>
+        <Button
+            android:id="@+id/but_next"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/but_text_next"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+    <ViewFlipper
+        android:id="@+id/view_flip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="#ff8787"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+        <LinearLayout
+            android:background="#87ff9d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+        <LinearLayout
+            android:background="#8787ff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+    </ViewFlipper>
 </LinearLayout>
